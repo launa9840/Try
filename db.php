@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
 $user = "root";
-$pass = "";
+$pass = "root";
 $dbname = "bus_ticket_system";
 
 $conn = new mysqli($host, $user, $pass, $dbname);
