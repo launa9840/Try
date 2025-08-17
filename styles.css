@@ -1,0 +1,304 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(background.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* login.css or style.css */
+
+.login-container {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 30px;
+    border-radius: 12px;
+    width: 400px;
+    color: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30%;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.login-container label {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.login-container input,
+.login-container select {
+    width: 100%;
+    padding: 10px 8px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.login-container button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(7, 113, 219);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+    background-color: rgb(0, 80, 170);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+    height: 10vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-out;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+}
+
+nav .logo span {
+    color: rgb(7, 113, 219);
+}
+
+nav .links {
+    display: flex;
+}
+
+nav .links .link a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    transition: 0.3s linear;
+}
+
+nav .links .link a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 3px;
+    background-color: rgb(7, 113, 219);
+    transition: 0.3s linear;
+}
+
+nav .links .link a:hover::before {
+    width: 100%;
+}
+
+nav .links .link a:hover {
+    color: rgb(7, 113, 219);
+}
+
+nav .buttons {
+    width: 250px;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .buttons .btn {
+    margin: 0 5px;
+    width: 50%;
+    height: 5vh;
+}
+
+nav .buttons .btn button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: white;
+    border-radius: 5px;
+    background-color: rgb(7, 113, 219);
+    transition: 0.2s linear;
+}
+
+nav .buttons .btn button:hover {
+    color: rgb(7, 113, 219);
+    border: 3px solid rgb(7, 113, 219);
+    background-color: white;
+}
+
+/* Section Content */
+section {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.content {
+    margin-top: 5%;
+    margin-left: 10%;
+    width: 40%;
+    color: white;
+    animation: fadeUp 1.5s ease-out;
+}
+
+.content h1 {
+    font-size: 4rem;
+    text-shadow: 0 0 7px white;
+}
+
+.content h2 {
+    font-size: 4rem;
+    text-shadow: 0 0 7px white;
+}
+
+.content h2 span {
+    color: rgb(7, 113, 219);
+    text-shadow: 2px 2px 3px rgb(7, 113, 219);
+}
+
+.content p {
+    width: 60%;
+    margin: 10px 0;
+}
+
+.content button {
+    width: 40%;
+    height: 7vh;
+    border-radius: 10px;
+    background-color: rgb(7, 113, 219);
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin: 20px;
+    transition: 0.2s linear;
+}
+
+.content button:hover {
+    font-size: 1.3rem;
+    background-color: transparent;
+    color: rgb(7, 113, 219);
+    border: 1px solid rgb(7, 113, 219);
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;          /* full viewport height */
+  position: fixed;        /* fixed on left */
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+  padding: 0;
+}
+
+/* Container for menu links */
+.sidebar-menu {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;           /* fills vertical space */
+  padding: 20px 0;
+  gap: 10px;
+}
+
+/* Sidebar links */
+.sidebar-menu a {
+  color: white;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-weight: 200;
+  border-left: 5px solid transparent;
+  transition: background-color 0.3s, border-color 0.3s;
+  flex-grow: 1;           /* each link fills equally */
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+  background-color: rgb(7, 113, 219);
+  border-left: 5px solid white;
+}
+
+/* Logout button */
+.logout {
+  margin-top: auto;      /* pushes logout button to bottom */
+  padding: 15px 20px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  background-color: #222;
+  border: none;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.logout:hover {
+  background-color: rgb(7, 113, 219);
+}
+
+/* Main content - pushed right so sidebar doesn't overlap */
+.main-content {
+  margin-left: 220px;    /* same as sidebar width */
+  padding: 40px;
+  flex-grow: 1;
+  color: orangered;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  }
+
+  
+
+
+
